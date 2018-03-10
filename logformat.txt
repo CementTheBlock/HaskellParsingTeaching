@@ -1,0 +1,14 @@
+It seems to consist of a different log message on each line. 
+Each line begins with a character indicating the type of log message it represents:
+• ’I’ for informational messages,
+• ’W’ for warnings, and
+• ’E’ for errors.
+The error message lines then have an integer indicating the severity
+of the error, with 1 being the sort of error you might get around to
+caring about sometime next summer, and 100 being epic, catastrophic
+failure. All the types of log messages then have an integer time stamp
+followed by textual content that runs to the end of the line. Here is a
+snippet of the log file including an informational message followed
+by a level 2 error message:
+I 147 mice in the air, I’m afraid, but you might catch a bat, and
+E 2 148 #56k istereadeat lo d200ff] BOOTMEM
