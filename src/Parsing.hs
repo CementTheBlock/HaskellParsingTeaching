@@ -1,6 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import Data.Text as T
+module Parsing where
+
+import           Data.Text (Text)
+import qualified Data.Text as T
 
 parseLogs :: Text -> Text
 parseLogs = undefined

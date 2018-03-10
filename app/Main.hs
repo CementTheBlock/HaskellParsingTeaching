@@ -1,9 +1,12 @@
+module Main where
+
 import Parsing
 
-import Data.Text as T
+import qualified Data.Text.IO as TIO
+import qualified Data.Text as T
 
 main :: IO ()
 main = do
-  logs <- T.readFile "./logs/sample.log"
+  logs <- TIO.readFile "./logs/sample.log"
   let output = parseLogs logs
-  putStr output
+  putStr . T.unpack $ output
