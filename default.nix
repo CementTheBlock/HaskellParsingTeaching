@@ -27,10 +27,10 @@ let fetchNixpkgs = import ./nix/fetchNixpkgs.nix;
          };
 
     {
-      mkDerivation = args: super.mkDerivation (args // {
-        doCheck = pkgs.lib.elem args.pname [ "parser-learning" ]; 
-        doHaddock = false;
-      });
+      #mkDerivation = args: super.mkDerivation (args // {
+      #  doCheck = pkgs.lib.elem args.pname [ "parser-learning" ]; 
+      #  doHaddock = false;
+      #});
       
       parser-learning = overrideCabal (build "parser-learning" ./.) (drv: {
         doBenchmark = false;
